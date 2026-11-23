@@ -28,13 +28,15 @@
             <div class="intro-rule">11 concepts · one connected workflow</div>
         </section>
 
-        <section class="guide" aria-label="Git concepts">
-            <nav class="index" aria-label="Concept index">
+        <nav class="index" aria-label="Concept index">
+            <div class="shell index-shell">
                 <p class="index-heading">The field notes</p>
                 <div class="index-list" id="concept-index"></div>
-            </nav>
+            </div>
+        </nav>
 
-            <article class="lesson" aria-live="polite" aria-atomic="true">
+        <article class="lesson" aria-live="polite" aria-atomic="true">
+            <div class="shell lesson-top">
                 <div class="lesson-head">
                     <div class="lesson-count"><strong id="current-count">01</strong> / <span id="total-count">11</span></div>
                     <div class="pager">
@@ -47,10 +49,20 @@
                     <span class="lesson-tag" id="lesson-tag"></span>
                 </div>
                 <p class="lesson-definition" id="lesson-definition"></p>
-                <div class="scene-wrap">
-                    <span class="scene-label" id="scene-label">A Git process</span>
-                    <div id="scene-container"></div>
+            </div>
+
+            <div class="stage">
+                <div class="stage-frame">
+                    <div class="stage-bar">
+                        <span class="scene-label" id="scene-label">A Git process</span>
+                        <span class="stage-hint">Scroll the diagram sideways &rarr;</span>
+                        <button class="stage-replay" type="button" id="replay"><i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Replay</button>
+                    </div>
+                    <div class="stage-art" id="scene-container"></div>
                 </div>
+            </div>
+
+            <div class="shell lesson-bottom">
                 <div class="lesson-details">
                     <section class="detail-block">
                         <h3>Keep in mind</h3>
@@ -66,10 +78,13 @@
                         <div class="command-note" id="command-note">Try in your terminal</div>
                         <p class="command" id="command"></p>
                     </div>
-                    <button class="replay-button" type="button" id="replay"><i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Replay</button>
+                    <div class="pager pager-foot">
+                        <button class="icon-button" type="button" id="previous-foot" aria-label="Previous concept" title="Previous concept"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                        <button class="icon-button" type="button" id="next-foot" aria-label="Next concept" title="Next concept"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
                 </div>
-            </article>
-        </section>
+            </div>
+        </article>
     </main>
     <footer class="site-foot">Git tracks snapshots. You bring the good decisions.</footer>
 
